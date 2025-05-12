@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import { useRouter } from "next/navigation";
 import { FaShieldAlt } from "react-icons/fa";
+import base_url from "@/components/helper/base_url";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -34,7 +35,7 @@ const Hero = () => {
     const payload = { name, email, mobileNo, dob, location, income };
 
     try {
-      const response = await fetch("http://localhost:5000/api/users", {
+      const response = await fetch(`${base_url}/api/users`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

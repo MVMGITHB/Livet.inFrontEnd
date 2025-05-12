@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import DataTable from "@/components/excel/datatable";
 import ExportButton from "@/components/excel/exportbutton";
+import base_url from "@/components/helper/base_url";
 
 const Page = () => {
   const [data, setData] = useState([]);
@@ -14,7 +15,7 @@ const Page = () => {
 
   const fetchData = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/users");
+      const res = await axios.get(`${base_url}/api/users`);
       setData(res.data);
     } catch (err) {
       console.error("Failed to fetch data:", err);
