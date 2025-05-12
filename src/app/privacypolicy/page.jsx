@@ -1,20 +1,32 @@
 // /app/privacy-policy/page.jsx
 
-import PrivacyPolicy from '@/components/contact/privacy';
+import PrivacyPolicy from "@/components/contact/privacy";
+// /app/privacy-policy/page.jsx
+
+import { Metadata } from "next";
 
 export const metadata = {
-  title: 'Privacy Policy | Top5Shots',
-  description: 'Read the Privacy Policy of YourCompany to understand how we collect, use, and protect your personal information. Learn about your rights and data protection measures.',
-  keywords: ['Privacy Policy', 'data protection', 'personal information', 'YourCompany', 'security', 'user rights'],
+  title: "Privacy Policy | livet.in",
+  description:
+    "Read the Privacy Policy of livet.in to understand how we collect, use, and protect your personal information. Learn about your rights and data protection measures.",
+  keywords: [
+    "Privacy Policy",
+    "data protection",
+    "personal information",
+    "livet.in",
+    "security",
+    "user rights",
+  ],
   openGraph: {
-    title: 'Privacy Policy | YourCompany',
-    description: 'YourCompany explains how we handle your data, your rights, and the measures we take to protect your information.',
+    title: "Privacy Policy | livet.in",
+    description:
+      "livet.in explains how we handle your data, your rights, and the measures we take to protect your information.",
     images: [
       {
-        url: '/path-to-your-image.jpg',
+        url: "/images/privacy-og.jpg",
         width: 1200,
         height: 630,
-        alt: 'Privacy Policy - YourCompany',
+        alt: "Privacy Policy - livet.in",
       },
     ],
   },

@@ -99,96 +99,119 @@ const Hero = () => {
             {step === 1 ? "Know Your Score" : "Additional Info"}
           </h2>
 
-          {step === 1 ? (
-            <form onSubmit={handleNext} className="space-y-6">
-              <div>
-                <label className="block mb-2">
-                  Full Name as per your Pancard{" "}
-                  <span className="text-red-700">*</span>
-                </label>
-                <input
-                  type="text"
-                  placeholder="Enter your full name"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-200 placeholder-gray-500"
-                  required
-                />
-              </div>
-              <div>
-                <label className="block mb-2">Email</label>
-                <input
-                  type="email"
-                  placeholder="you@example.com"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-200 placeholder-gray-500"
-                  required
-                />
-              </div>
-              <div>
-                <label className="block mb-2">Mobile No.</label>
-                <input
-                  type="tel"
-                  placeholder="+91 12345 67890"
-                  value={mobileNo}
-                  onChange={(e) => setMobileNo(e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-200 placeholder-gray-500"
-                  required
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full py-3 bg-blue-600 text-white font-medium rounded-xl shadow hover:bg-blue-700 transition"
-              >
-                Get Your Score
-              </button>
-            </form>
-          ) : (
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label className="block mb-2">Date of Birth</label>
-                <input
-                  type="date"
-                  value={dob}
-                  onChange={(e) => setDob(e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-200 placeholder-gray-500"
-                  required
-                />
-              </div>
-              <div>
-                <label className="block mb-2">Location</label>
-                <input
-                  type="text"
-                  placeholder="City, State"
-                  value={location}
-                  onChange={(e) => setLocation(e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-200 placeholder-gray-500"
-                  required
-                />
-              </div>
-              <div>
-                <label className="block mb-2">Monthly Income</label>
-                <input
-                  type="text"
-                  placeholder="e.g., ₹50,000"
-                  value={income}
-                  onChange={(e) => setIncome(e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-200 placeholder-gray-500"
-                  required
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full py-3 bg-green-600 text-white font-medium rounded-xl shadow hover:bg-green-700 transition"
-              >
-                Submit
-              </button>
-            </form>
-          )}
+          <form
+            onSubmit={step === 1 ? handleNext : handleSubmit}
+            className="space-y-6"
+          >
+            {step === 1 ? (
+              <>
+                <div>
+                  <label className="block mb-2">
+                    Full Name as per your Pancard{" "}
+                    <span className="text-red-700">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Enter your full name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-200 placeholder-gray-500"
+                    required
+                  />
+                </div>
+                <div>
+                  <label className="block mb-2">Email</label>
+                  <input
+                    type="email"
+                    placeholder="you@example.com"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-200 placeholder-gray-500"
+                    required
+                  />
+                </div>
+                <div>
+                  <label className="block mb-2">Mobile No.</label>
+                  <input
+                    type="tel"
+                    placeholder="+91 12345 67890"
+                    value={mobileNo}
+                    onChange={(e) => setMobileNo(e.target.value)}
+                    className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-200 placeholder-gray-500"
+                    required
+                  />
+                </div>
+              </>
+            ) : (
+              <>
+                <div>
+                  <label className="block mb-2">Date of Birth</label>
+                  <input
+                    type="date"
+                    value={dob}
+                    onChange={(e) => setDob(e.target.value)}
+                    className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-200"
+                    required
+                  />
+                </div>
+                <div>
+                  <label className="block mb-2">Location</label>
+                  <input
+                    type="text"
+                    placeholder="City, State"
+                    value={location}
+                    onChange={(e) => setLocation(e.target.value)}
+                    className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-200"
+                    required
+                  />
+                </div>
+                <div>
+                  <label className="block mb-2">Monthly Income</label>
+                  <input
+                    type="text"
+                    placeholder="e.g., ₹50,000"
+                    value={income}
+                    onChange={(e) => setIncome(e.target.value)}
+                    className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-200"
+                    required
+                  />
+                </div>
+              </>
+            )}
+
+            {/* Checkbox (Visible in both steps) */}
+            <div className="flex items-start">
+              <input
+                id="checkbox"
+                type="checkbox"
+                required
+                className="mt-1 mr-2 h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+              />
+              <label htmlFor="checkbox" className="text-sm text-gray-600">
+                By continuining & Registering With us you agree to our s{" "}
+                <a
+                  href="/termsofuse"
+                  className="font-semibold text-blue-600 underline"
+                >
+                  Terms & Condition
+                </a>{" "}
+                .
+              </label>
+            </div>
+
+            <button
+              type="submit"
+              className={`w-full py-3 ${
+                step === 1
+                  ? "bg-blue-600 hover:bg-blue-700"
+                  : "bg-green-600 hover:bg-green-700"
+              } text-white font-medium rounded-xl shadow transition`}
+            >
+              {step === 1 ? "Get Your Score" : "Submit"}
+            </button>
+          </form>
         </div>
       </div>
-
       {/* Mobile Carousel */}
       <div className="lg:hidden mt-12 px-4">
         <Swiper
