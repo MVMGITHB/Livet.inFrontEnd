@@ -181,12 +181,12 @@ const Hero = () => {
 
             {/* Checkbox (Visible in both steps) */}
             <div className="flex items-start">
-              <input
+              {/* <input
                 id="checkbox"
                 type="checkbox"
                 required
                 className="mt-1 mr-2 h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-              />
+              /> */}
               <label htmlFor="checkbox" className="text-sm text-gray-600">
                 By continuining & Registering With us you agree to our s{" "}
                 <a
