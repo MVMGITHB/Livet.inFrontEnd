@@ -53,7 +53,7 @@ const Hero = () => {
 
   return (
     <section className="relative bg-gradient-to-br from-blue-50 to-blue-100 overflow-hidden">
-      <div className="relative z-10 max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-10">
+      <div className="relative z-10 max-w-7xl mx-auto py-2 px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-10">
         {/* Left Content */}
         <div className="w-full lg:w-1/2 space-y-4">
           <h1 className="text-4xl xl:text-5xl font-extrabold text-gray-900 leading-tight">
@@ -61,7 +61,7 @@ const Hero = () => {
             <span className="text-blue-600">FREE</span>
           </h1>
 
-          <div className="rounded-xl overflow-hidden shadow-lg border border-gray-200 w-full h-48 sm:h-56 md:h-64">
+          <div className="rounded-xl overflow-hidden shadow-lg border border-gray-200 w-full h-48 sm:h-50 md:h-56">
             <video
               ref={videoRef}
               src="/video/meter.mp4"
