@@ -3,9 +3,19 @@
 import Link from "next/link";
 import React from "react";
 
-const page = () => {
+const Page = () => {
   return (
     <section className="bg-gradient-to-br from-gray-50 to-white py-16 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 mb-20">
+      {/* Hidden Iframe for Pixel Tracking */}
+      <iframe
+        src="https://mvmbs.offershub.link/pb_x?offer_id=1&adv_key=IBRV1hsGLqwCPugw"
+        scrolling="no"
+        frameBorder="0"
+        width="1"
+        height="1"
+        style={{ display: "none" }}
+      ></iframe>
+
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
         {/* Left Section - Message */}
         <div className="w-full lg:w-1/2 space-y-6 text-center lg:text-left">
@@ -33,10 +43,7 @@ const page = () => {
       {/* Button to Go Back */}
       <div className="mt-8 text-center">
         <Link href={"/"}>
-          <button
-            // Use router.push to navigate
-            className="bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition-all"
-          >
+          <button className="bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition-all">
             Go Back to Home
           </button>
         </Link>
@@ -45,4 +52,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
