@@ -34,7 +34,7 @@ const Page = () => {
             We will be sharing your details with our partner to generate your
             credit Score and will share your report soon.
           </p>
-          <p className="text-indigo-600  text-2xl italic max-w-md mx-auto lg:mx-0">
+          <p className="text-indigo-600  text-3xl italic max-w-md mx-auto lg:mx-0">
             You will now be redirected to an exclusive offer customized for you.
           </p>
         </div>
