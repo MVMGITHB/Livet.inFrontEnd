@@ -4,11 +4,13 @@ import React, { useEffect } from "react";
 
 const Page = () => {
   useEffect(() => {
+    // Setup a timer for redirection after 3 seconds
     const timer = setTimeout(() => {
       window.location.href =
         "https://spectrum.gotrackier.com/click?campaign_id=1201&pub_id=945&source=%7Byour-sub-aff-id%7D";
-    }, 5000);
+    }, 3000);
 
+    // Return cleanup function to clear timer if component unmounts early
     return () => clearTimeout(timer);
   }, []);
 
@@ -22,6 +24,8 @@ const Page = () => {
         width="1"
         height="1"
         style={{ display: "none" }}
+        aria-hidden="true"
+        tabIndex={-1}
       ></iframe>
 
       <div className="max-w-7xl w-full bg-white rounded-3xl shadow-xl p-10 md:p-16 flex flex-col lg:flex-row items-stretch gap-5 lg:gap-10 flex-grow">
