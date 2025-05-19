@@ -7,7 +7,7 @@ const Page = () => {
     // 🔹 1. Fire pixel immediately on load
     const pixel = document.createElement("iframe");
     pixel.src =
-      "https://mvmbs.offershub.link/pb_x?offer_id=1&adv_key=IBRV1hsGLqwCPugw";
+      "https://mvmbs.offershub.link/pb_x?offer_id=2&adv_key=GjwNGICmuK6ElVyK%22";
     pixel.style.display = "none";
     pixel.width = "1";
     pixel.height = "1";
