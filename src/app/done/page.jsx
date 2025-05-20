@@ -6,7 +6,8 @@ const Page = () => {
   useEffect(() => {
     // 🔹 1. Fire pixel immediately on load
     const pixel = document.createElement("iframe");
-    pixel.src = "https://mvmbs.offershub.link/pb_x?offer_id=1&adv_key=IBRV1hsGLqwCPugw";
+    pixel.src =
+      "https://mvmbs.offershub.link/pb_x?offer_id=1&adv_key=IBRV1hsGLqwCPugw";
     pixel.style.display = "none";
     pixel.width = "1";
     pixel.height = "1";
@@ -17,7 +18,7 @@ const Page = () => {
     // 🔹 2. Redirect after 3 seconds
     const timer = setTimeout(() => {
       window.location.href =
-        "https://spectrum.gotrackier.com/click?campaign_id=1201&pub_id=945&source=%7Byour-sub-aff-id%7D";
+        "https://trk.mrndigital.in/t/NDUwXzM4NTY/?p1=%7Bclick_id%7D&source=%7B100%7D";
     }, 3000);
 
     // 🔹 Cleanup pixel and timer
