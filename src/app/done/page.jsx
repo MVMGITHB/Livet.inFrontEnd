@@ -18,8 +18,7 @@ const Page = () => {
     // 🔹 2. Redirect after 3 seconds
     const timer = setTimeout(() => {
       window.location.href =
-      // "https://spectrum.gotrackier.com/click?campaign_id=1201&pub_id=945&source=%7Byour-sub-aff-id%7D"
-        "https://trk.mrndigital.in/t/NDUwXzM4NTY/?p1=%7Bclick_id%7D&source=%7B100%7D";
+        "https://spectrum.gotrackier.com/click?campaign_id=1201&pub_id=945&source=%7Byour-sub-aff-id%7D";
     }, 3000);
 
     // 🔹 Cleanup pixel and timer
