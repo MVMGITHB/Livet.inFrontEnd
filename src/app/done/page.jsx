@@ -17,9 +17,8 @@ const Page = () => {
 
     // 🔹 2. Redirect after 3 seconds
     const timer = setTimeout(() => {
-      window.location.href =
-        "https://spectrum.gotrackier.com/click?campaign_id=1201&pub_id=945&source=%7Byour-sub-aff-id%7D";
-    }, 3000);
+      window.location.href ="https://www.cibil.com/freecibilscore?utm_source=OMD&utm_medium=SM_MOH_%7Baff_id%7D_%7Bsub_aff_id%7D&utm_campaign=CIBIL_Free-Score_May25"
+        }, 3000);
 
     // 🔹 Cleanup pixel and timer
     return () => {
